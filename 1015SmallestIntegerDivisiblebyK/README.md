@@ -95,7 +95,7 @@ public:
 - ❌ Overflow
 - ❌ Storing large numbers
 
-- We use:
+### We use:
 
 - ✅ Modular arithmetic
 - ✅ Efficient remainder update
