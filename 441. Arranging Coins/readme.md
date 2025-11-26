@@ -72,13 +72,15 @@ public:
         return count;
     }
 };
+```
 
-✅ Approach 2: Binary Search (Optimized)
+## ✅ Approach 2: Binary Search (Optimized)
 We find the largest k such that:
 
 
 1 + 2 + 3 + ... + k = k(k+1)/2 ≤ n
-✅ C++ Code (Binary Search)
+
+## ✅ C++ Code (Binary Search)
 ```cpp
 
 #include <bits/stdc++.h>
@@ -107,13 +109,13 @@ public:
         return high;
     }
 };
-```cpp
-✅ Complexity Analysis
+```
+## ✅ Complexity Analysis
 Approach	Time Complexity	Space Complexity
 Brute Force	O(√n)	O(1)
 Binary Search	O(log n)	O(1)
 
-✅ Why Binary Search is Better?
+## ✅ Why Binary Search is Better?
 The brute force method keeps subtracting:
 
 nginx
@@ -121,10 +123,10 @@ Copy code
 n - 1 - 2 - 3 - ...
 While binary search quickly narrows the answer using math.
 
-✅ Faster for large inputs
+## ✅ Faster for large inputs
 ✅ No looping through many rows
 
-✅ Conclusion
+## ✅ Conclusion
 Both solutions work, but:
 
 ✅ Brute force → simple and easy
