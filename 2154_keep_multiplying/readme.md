@@ -1,10 +1,96 @@
-Project 2154
+### 🔥 LeetCode 2154 — Keep Multiplying Found Values by Two
+C++ Solutions (Brute + Optimal)
 
-A clean and professional GitHub README template for your project named 2154. You can customize all sections as you like.
+# 🧩 Problem Summary
 
-🚀 Overview
+You're given:
 
-2154 is a project aimed at solving real-world problems with efficiency and clarity. This repository includes the full source code, documentation, and setup instructions to help developers quickly get started. 2154 is a project aimed at solving real‑world problems with efficiency and clarity. This repository includes the full source code, documentation, and setup instructions to help developers quickly get started.
+An integer array nums
 
-# my startegy
-I solved this problem using two approaches. The first method is based on sorting, where sorting the array groups identical elements together, making it simple to scan and identify the required value. The second method uses map/set, allowing efficient counting or tracking of elements in O(n) time without modifying the original data. Both approaches work correctly: the sorting method is straightforward and easy to understand, while the map/set method is faster and more optimized for large inputs.
+An integer original
+
+You must repeatedly do the following:
+
+If original exists in nums, multiply it by 2
+Else, stop and return the final value of original.
+
+## ✔ Approach 1 — Sorting + Linear Scan
+
+This was your first attempt.
+
+# 🔍 Logic
+
+Sort the array.
+
+Traverse the sorted list.
+
+If you find original, multiply it by 2.
+
+Continue scanning for the new value.
+
+# 📌 Code
+// First attempt — Sorting + Linear Scan
+```cpp
+class Solution {
+public:
+    int findFinalValue(vector<int>& nums, int original) {
+        sort(nums.begin(), nums.end());
+        
+        for (int num : nums) {
+            if (num == original)
+                original *= 2;
+        }
+
+        return original;
+    }
+};
+```
+# ⏱ Complexity
+
+Step	Complexity
+Sorting	O(n log n)
+Scanning	O(n)
+Total	O(n log n)
+
+## ✔ Approach 2 — Optimal Using Unordered Set
+
+This is your optimized solution.
+
+# 🔍 Logic
+
+Insert all values into an unordered_set → gives O(1) lookup.
+
+While original exists in the set:
+
+Multiply original by 2
+
+Return final value.
+
+# 📌 Code
+// Second attempt — Optimal using unordered_set
+```cpp
+class Solution {
+public:
+    int findFinalValue(vector<int>& nums, int original) {
+        unordered_set<int> mp(nums.begin(), nums.end());
+        
+        while (mp.count(original))
+            original *= 2;
+
+        return original;
+    }
+};
+```
+# ⏱ Complexity
+Operation	Complexity
+Build set	O(n)
+Lookups	O(k) where k = number of times we multiply
+Total	O(n)
+
+# 🏁 Final Discussion
+
+The sorting version works but is slower: O(n log n)
+
+The unordered_set version is optimal: O(n)
+
+Both are correct and easy to understand.
