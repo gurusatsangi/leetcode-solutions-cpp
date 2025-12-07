@@ -26,7 +26,6 @@ Explanation: 9 + 3 + 1 = 13
 Input: numBottles = 15, numExchange = 4
 Output: 19
 Explanation: 15 + 3 + 1 = 19
-
 ## 💡 Approach
 
 We simulate the process:
