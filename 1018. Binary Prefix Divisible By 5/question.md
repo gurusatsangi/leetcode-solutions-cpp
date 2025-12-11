@@ -1,10 +1,5 @@
 1018. Binary Prefix Divisible By 5
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+
 You are given a binary array nums (0-indexed).
 
 We define xi as the number whose binary representation is the subarray nums[0..i] (from most-significant-bit to least-significant-bit).
