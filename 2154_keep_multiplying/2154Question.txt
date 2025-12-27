@@ -1,4 +1,3 @@
-# sorting maping loops
 2154. Keep Multiplying Found Values by Two
 
 You are given an array of integers nums. You are also given an integer original which is the first number that needs to be searched for in nums.
